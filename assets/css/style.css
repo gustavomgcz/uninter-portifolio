@@ -1,0 +1,66 @@
+/* CSS referente às estilizações gerais do site */
+
+/* criação de variaveis de cores */
+:root {
+  --bg-card: #323232;
+  --bg-minicard: #3c3c3c;
+  --cinza-botao: #414141;
+  --cinza-botao-ativo: #6c6c6c;
+  --cinza-hover: #9d9d9d;
+  --cor-fundo: #2c2c2c;
+  --cor-icone: #f0f0f0;
+  --cor-texto: #ffffff;
+}
+
+* {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  transition: background-color 0.5s ease, color 0.75s ease;
+}
+
+/* atualização de variaveis de cores para tema claro */
+body.light-mode {
+  --bg-card: #e9e9e9;
+  --bg-minicard: #f0f0f0;
+  --cinza-botao: #a3a3a3;
+  --cinza-botao-ativo: #c6c6c6;
+  --cinza-hover: #5d5d5d;
+  --cor-fundo: #dddddd;
+  --cor-icone: #3e3e3e;
+  --cor-texto: #000000;
+}
+
+.container {
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+#alterar-tema {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+#alterar-tema svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--cor-texto);
+  background: transparent;
+}
+
+/* Responsivo */
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-left: calc((100% - 1100px) / 2);
+    padding-right: calc((100% - 1100px) / 2);
+  }
+}

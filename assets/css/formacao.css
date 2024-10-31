@@ -1,0 +1,204 @@
+/* Sessão Formação */
+
+.main-formacao,
+.main-idioma,
+.main-cursos {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+.main-formacao__conteudo h2,
+.main-cursos__conteudo h2,
+.main-idioma__conteudo h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.main-formacao__card-container {
+  display: flex;
+  gap: 5rem;
+}
+
+.main-formacao__card {
+  background-color: var(--bg-card);
+  border: 3px solid var(--preto);
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 260px;
+  padding: 1.5rem;
+  width: calc((100% - 2rem) / 3);
+}
+
+.main-formacao__logo,
+.main-formacao__card-local,
+.main-formacao__card-curso,
+.main-formacao__card-data {
+  background-color: transparent;
+}
+
+.main-formacao__logo {
+  align-self: center;
+  height: 92px;
+  width: fit-content;
+}
+
+.main-formacao__card-local {
+  font-size: 1.25rem;
+  height: 40px;
+}
+
+.main-formacao__card-curso {
+  font-size: 1rem;
+  height: 32px;
+}
+
+.main-formacao__card-data {
+  font-size: 0.75rem;
+}
+
+.main-formacao__card-local,
+.main-formacao__card-curso,
+.main-formacao__card-data {
+  text-align: center;
+  align-content: center;
+}
+
+/* Sessão Idioma */
+
+.main-idioma__idiomas {
+  display: flex;
+  gap: 5rem;
+  text-align: center;
+}
+
+.main-idioma__texto {
+  font-size: 1.25rem;
+  line-height: normal;
+  padding-bottom: 0.5rem;
+}
+
+.main-idioma__nota {
+  display: flex;
+  justify-content: center;
+}
+
+.main-idioma__nota svg {
+  fill: goldenrod;
+  height: 24px;
+  width: 24px;
+}
+
+.vazio svg {
+  fill: var(--preto);
+}
+
+.main-idioma__nivel {
+  font-size: 0.75rem;
+}
+
+/* Sessão Cursos */
+
+.main-curso__tipo-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.large {
+  grid-column: 1/3;     /* Elementos com a classe large irão ocupar todas as colunas do grid */
+}
+
+.medium {
+  grid-column: auto;     /* Elementos com a classe medium irão se encaixar em colunas automaticamente no grid */
+}
+
+.main-cursos__conteudo {
+  width: 100%;
+}
+
+.main-curso__tipo {
+  background-color: var(--bg-card);
+  border: 3px solid var(--preto);
+  border-radius: 5px;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);      /* define quantas colunas o grid terá */
+  padding: 1.5rem;
+  position: relative;
+}
+
+.main-curso__tipo-medium {
+    grid-template-columns: repeat(2, 1fr)     /* define quantas colunas o grid terá caso o elemento tenha a classe aqui editada */
+}
+
+.main-curso__tipo h3 {
+  background: linear-gradient(to top, var(--bg-card), var(--cor-fundo));
+  font-size: 1.25rem;
+  left: 10px;
+  top: -13px;
+  position: absolute;
+}
+
+.main-cursos__card,
+.main-cursos__card-texto,
+.main-cursos__card-local,
+.main-cursos__card-curso,
+.main-cursos__logo {
+  background-color: transparent;
+}
+
+.main-cursos__card {
+  align-items: center;
+  background-color: var(--bg-minicard);
+  border: 2px dotted var(--preto);
+  display: flex;
+  gap: .5rem;
+  padding: 0.5rem;
+}
+
+.main-cursos__logo {
+  align-self: center;
+  height: 64px;
+  max-width: 94px;
+}
+
+.main-cursos__card-curso {
+    font-size: .75rem;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1024px) {
+  /* define a direção do container flex par colunas para ajustar melhor a telas menores */
+  .main-idioma__idiomas,
+  .main-cursos,
+  .main-formacao__card-container {
+    flex-direction: column;
+  }
+
+  .main-formacao__card {
+    width: 100%;
+  }
+
+  .main-idioma__conteudo {
+    margin-bottom: 25px;
+    margin-left: 0;
+  }
+
+  .main-curso__tipo-container {
+    grid-template-columns: 100%;
+  }
+  
+  .large {
+    grid-column: auto;    /* ajusta o tamanho da coluna para não haver transbordo */
+  }
+
+  .main-curso__tipo {
+    grid-template-columns: 1fr;
+  }
+}

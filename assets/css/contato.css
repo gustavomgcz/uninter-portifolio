@@ -1,0 +1,98 @@
+.main-contato h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.main-contato__container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.main-contato__area-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.main-contato__texto {
+  font-size: 1.25rem;
+}
+
+.main-contato__icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.main-contato__icon {
+  display: inline;
+}
+
+.main-contato__icon svg {
+  fill: var(--cor-icone);
+}
+
+.main-contato__area-texto form,
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo {
+  padding-bottom: 1rem;
+}
+
+.campo label {
+  font-size: 1.375rem;
+  margin-bottom: 0.5rem;
+}
+
+.campo input,
+.campo textarea {
+  background: var(--bg-minicard);
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.campo textarea {
+  resize: none;
+}
+
+.campo textarea:focus,
+.campo input:focus {
+  border: none;
+  outline: none;
+}
+
+.main-contato-btn {
+  align-self: center;
+  background-color: var(--cinza-botao);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+}
+
+.main-contato-btn:hover {
+  text-decoration: underline;
+}
+
+.main-contato-btn:active {
+  background-color: var(--cinza-botao-ativo);
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 1024px) {
+  .main-contato__container {
+    grid-template-columns: 1fr;
+  }
+}

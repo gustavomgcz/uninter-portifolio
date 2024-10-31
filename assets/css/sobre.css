@@ -1,0 +1,132 @@
+/* CSS referente às estilizações da pagina de sobre */
+
+.main-sobre {
+    display: flex;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    position: relative;
+}
+
+.main-sobre__conteudo {
+    margin-right: 30%;
+    position: relative;
+}
+
+.main-sobre__conteudo h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.main-sobre__texto {
+    font-size: 1.25rem;
+    line-height: normal;
+    margin-bottom: .625rem;
+}
+
+.main-sobre__texto:last-child {
+    margin-bottom: 0;
+}
+
+.main-sobre__imagem--tibia {
+    display: none;
+    height: 250px;
+    left: 85%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+}
+
+.main-sobre-lateral {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    position: relative;
+}
+
+.main-sobre-lateral__conteudo {
+    margin-left: 30%;
+    position: relative;
+    text-align: right;
+}
+
+.main-sobre-lateral__conteudo h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.main-sobre-lateral__texto {
+    font-size: 1.25rem;
+    line-height: normal;
+    margin-bottom: .625rem;
+}
+
+.main-sobre-lateral__texto:last-child {
+    margin-bottom: 0;
+}
+
+/* estilização do 'botao' para criar o efeito de preenchimento e mudança de lugar durante o click */
+.main-sobre-lateral__link {
+    background: linear-gradient(to right, transparent 0%, transparent 50%, var(--cinza-botao) 50%, var(--cinza-botao) 100%);
+    background-size: 201% 100%;
+    border: 5px solid var(--cinza-botao);
+    box-shadow: 7px 7px 0 var(--cinza-botao);
+    font-weight: bold;
+    padding: 1rem;
+    position: absolute;
+    right: 70%;
+    text-align: left;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-position 0.5s linear, box-shadow 0.15s linear, transform 0.05s linear;
+}
+
+.main-sobre-lateral__link:hover {
+    background-position: 100% 0;
+}
+
+.main-sobre-lateral__link:active {
+    box-shadow: 0 0 0 var(--cinzao);
+    transform: translate(calc(-50% + 7px), calc(-50% + 7px));
+}
+
+/* Responsivo */
+
+
+@media screen and (max-width: 1024px) {
+    .main-sobre__conteudo {
+        margin-right: 0;
+    }
+
+    .main-sobre__imagem--tibia {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .main-sobre-lateral {
+        flex-direction: column;
+    }
+
+    .main-sobre-lateral__conteudo {
+        margin-bottom: 25px;
+        margin-left: 0;
+    }
+
+    .main-sobre-lateral__link {
+        align-self: center;
+        padding: 1rem;
+        position: relative;
+        right: 0;
+        text-align: center;
+        top: 0;
+        transform: none;
+        width: 21ch;
+    }
+
+    .main-sobre-lateral__link:active {
+        transform: translate(7px, 7px);
+    }
+}
